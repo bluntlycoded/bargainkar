@@ -1,0 +1,33 @@
+/* Home.css */
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .hero-section {
+    background-color: #f8f8f8;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .home-heading {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .home-description {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  .section-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Additional styles for other sections can be added here */
+  

@@ -1,0 +1,26 @@
+/* SpecialOffersSlider.css */
+
+.special-offers-slider-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .special-offer-slide {
+    position: relative;
+  }
+  
+  .special-offer-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .special-offer-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
