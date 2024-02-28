@@ -1,12 +1,15 @@
 /* Header.css */
 
 header {
-    background-color: #ffffff;
+  background-color: #3498db; /* Vibrant blue color */
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+  display: flex;
     border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
-    display: flex;
+    color: #ddd;
     justify-content: space-between;
     align-items: center;
+    font-family: "DM Sans", sans-serif;
   }
   
   .logos{
@@ -20,11 +23,13 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
+    color: #ddd;
   }
   
   
   nav li {
     margin-right: 20px;
+    color: #ddd;
   }
   
   nav a {
@@ -33,6 +38,7 @@ header {
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s ease-in-out;
+    color: #ddd;
   }
   
   nav a:hover {

@@ -6,6 +6,7 @@ footer {
     margin-top: 20px;
   }
   
+  
   .footer-content {
     display: flex;
     justify-content: space-around;
@@ -26,6 +27,7 @@ footer {
   .footer-section p {
     color: #666;
   }
+  
   
   .footer-bottom {
     margin-top: 20px;
