@@ -36,5 +36,6 @@ const ProductPage = () => {
     </div>
   );
 };
+//view Similar Products
 
 export default ProductPage;
