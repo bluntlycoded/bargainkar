@@ -8,24 +8,24 @@ const productsData = [
     id: 1,
     name: 'Product 1',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    price: '$19.99',
+    price: 'Rs.1999.99',
     image: 'https://via.placeholder.com/150',
   },
   {
     id: 2,
     name: 'Product 2',
     description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-    price: '$29.99',
+    price: 'Rs.2999.99',
     image: 'https://via.placeholder.com/150',
   },
   {
     id: 3,
     name: 'Product 3',
     description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-    price: '$29.99',
+    price: 'Rs.3999.99',
     image: 'https://via.placeholder.com/150',
   },
-  // Add more products as needed
+ 
 ];
 
 const Products = () => {
