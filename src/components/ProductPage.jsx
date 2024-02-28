@@ -37,5 +37,6 @@ const ProductPage = () => {
   );
 };
 //view Similar Products
+//Recently Viewed
 
 export default ProductPage;
