@@ -1,31 +1,59 @@
-// Login.jsx
+// Login.js
 
 import React, { useState } from 'react';
-// import { signInWithEmailAndPassword } from 'firebase/auth';
-// import { auth } from '../firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { Link } from 'react-router-dom';
+import firebaseApp from '../Firebase';
+
+
 import './Login.css';
+
+const auth = getAuth(firebaseApp);
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-//   const handleLogin = async () => {
-//     try {
-//       await signInWithEmailAndPassword(auth, email, password);
-//       // Redirect or handle successful login
-//     } catch (error) {
-//       console.error('Error logging in:', error.message);
-//     }
-//   };
+  const [user, loading, error] = useAuthState(auth);
+
+  const handleLogin = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      alert('Login successful!');
+    } catch (error) {
+      console.error('Login error:', error.message);
+    }
+  };
 
   return (
-    <div className='maindiv'>
-      <h2>Login</h2>
-      <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-      <button>Login</button> 
-      <a href='/register'><p>Don't Have An Account?</p></a>
-      {/* onClick={handleLogin} */}
+    <div className="login-container">
+      <h1>Firebase Authentication</h1>
+      {loading && <p>Loading...</p>}
+      {error && <p className="error-message">Error: {error.message}</p>}
+      {user ? (
+        <div>
+          <p>Welcome, {user.email}! You are logged in.</p>
+          <button onClick={() => auth.signOut()}>Logout</button>
+        </div>
+      ) : (
+        <div>
+          <label>Email:</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+          <label>Password:</label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+
+          <button onClick={handleLogin}>Login</button>
+
+          <p>
+            Don't have an account? <Link to="/register">Sign up here</Link>.
+          </p>
+          <p>
+          <Link to="/forgot-password">Forgot your password?</Link>
+        </p>
+        </div>
+      )}
     </div>
   );
 };
